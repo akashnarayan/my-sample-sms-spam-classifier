@@ -63,8 +63,8 @@ if st.sidebar.button("Show"):
         st.markdown(f"Feedback: {st.subheader('Feedback')}")
     
 # Use markdown to add some CSS code to style the app elements
-st.markdown("""
-<style>
+
+css = '''
 * {
   box-sizing: border-box;
 }
@@ -101,5 +101,6 @@ p {
 .u {
   text-decoration: underline;
 }
-</style>
-""")
+'''
+
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
